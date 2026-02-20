@@ -157,7 +157,7 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Recommended SKU (Hero Card) ── */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)] text-center">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)]">
         <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/20 rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="relative">
           <div className="flex items-center gap-2 mb-5 justify-center">
@@ -167,25 +167,27 @@ export default function ByAreaTab() {
             </span>
           </div>
           
-          <div className="mb-5">
-            <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
-              Recommended SKU
-            </p>
-            <div className="text-4xl font-bold text-neutral-900">
-              {calc.recommended.label}
+          <div className="grid grid-cols-2 gap-3 mb-5">
+            <div className="bg-neutral-900 rounded-xl p-4 text-center shadow-md">
+              <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
+                SKU
+              </p>
+              <div className="text-3xl font-bold text-white">
+                {calc.recommended.label}
+              </div>
+            </div>
+
+            <div className="bg-neutral-900 rounded-xl p-4 text-center shadow-md">
+              <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
+                Quantity
+              </p>
+              <div className="text-3xl font-bold text-white">
+                {calc.recommended.units}
+              </div>
             </div>
           </div>
 
-          <div className="mb-5">
-            <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
-              Quantity Needed
-            </p>
-            <div className="text-5xl font-bold text-neutral-900">
-              {calc.recommended.units}
-            </div>
-          </div>
-
-          <div className="mt-4 space-y-1">
+          <div className="space-y-1 text-center">
             <p className="text-sm text-neutral-600">
               Total Provided:{" "}
               <span className="font-semibold text-neutral-800">
@@ -199,7 +201,7 @@ export default function ByAreaTab() {
               </span>
             </p>
           </div>
-          <p className="mt-4 text-xs text-amber-700/70 leading-relaxed">
+          <p className="mt-4 text-xs text-amber-700/70 leading-relaxed text-center">
             Recommendation is based on project size and optimal container quantity.
           </p>
         </div>
