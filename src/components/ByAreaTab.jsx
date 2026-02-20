@@ -142,11 +142,11 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Volume Needed ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] text-center">
         <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
           You'll Need Approximately
         </p>
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-baseline gap-2 justify-center">
           <span className="text-3xl font-bold text-neutral-900">
             {calc.litersNeeded} L
           </span>
@@ -157,24 +157,34 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Recommended SKU (Hero Card) ── */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)]">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)] text-center">
         <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/20 rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="relative">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-5 justify-center">
             <Flame className="h-4 w-4 text-amber-600" />
             <span className="text-xs font-bold tracking-widest uppercase text-amber-700">
               Recommended
             </span>
           </div>
-          <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-5xl font-bold text-neutral-900">
-              {calc.recommended.units}
-            </span>
-            <span className="text-2xl text-neutral-500 font-bold">×</span>
-            <span className="text-3xl font-bold text-neutral-900">
+          
+          <div className="mb-5">
+            <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+              Recommended SKU
+            </p>
+            <div className="text-4xl font-bold text-neutral-900">
               {calc.recommended.label}
-            </span>
+            </div>
           </div>
+
+          <div className="mb-5">
+            <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+              Quantity Needed
+            </p>
+            <div className="text-5xl font-bold text-neutral-900">
+              {calc.recommended.units}
+            </div>
+          </div>
+
           <div className="mt-4 space-y-1">
             <p className="text-sm text-neutral-600">
               Total Provided:{" "}
