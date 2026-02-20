@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { Plus, Minus, Flame } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 
 // ── Constants ──
 const COVERAGE_RATE = 6; // m² per liter per coat
