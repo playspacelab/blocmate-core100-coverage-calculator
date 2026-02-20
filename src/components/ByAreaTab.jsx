@@ -18,7 +18,8 @@ export default function ByAreaTab() {
 
   // ── Core calculations ──
   const calc = useMemo(() => {
-    const litersRaw = (area * coats) / COVERAGE_RATE;
+    const areaValue = parseInt(area) || 1;
+    const litersRaw = (areaValue * coats) / COVERAGE_RATE;
     const litersNeeded = litersRaw * (1 + buffer / 100);
     const gallonsNeeded = litersNeeded / GALLONS_PER_LITER;
 
@@ -33,9 +34,9 @@ export default function ByAreaTab() {
     // ── Recommendation logic ──
     // Determine preferred SKU based on area size
     let preferredLabel;
-    if (area <= 6) preferredLabel = "1L";
-    else if (area <= 25) preferredLabel = "4.5L";
-    else if (area >= 100) preferredLabel = "22L";
+    if (areaValue <= 6) preferredLabel = "1L";
+    else if (areaValue <= 25) preferredLabel = "4.5L";
+    else if (areaValue >= 100) preferredLabel = "22L";
     else preferredLabel = "4.5L"; // 26–99 m²
 
     const preferred = skuEstimates.find((s) => s.label === preferredLabel);
@@ -83,7 +84,12 @@ export default function ByAreaTab() {
               type="number"
               min={1}
               value={area}
-              onChange={(e) => setArea(Math.max(1, parseInt(e.target.value) || 1))}
+              onChange={(e) => setArea(e.target.value)}
+              onBlur={(e) => {
+                if (e.target.value === '' || parseInt(e.target.value) < 1) {
+                  setArea(1);
+                }
+              }}
               className="text-6xl font-light text-center w-44 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
             <span className="text-lg text-neutral-400 font-medium">m²</span>
