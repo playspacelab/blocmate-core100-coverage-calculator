@@ -32,26 +32,29 @@ export default function ByAreaTab() {
     });
 
     // ── Recommendation logic ──
-    // Determine preferred SKU based on area size
-    let preferredLabel;
-    if (areaValue <= 6) preferredLabel = "1L";
-    else if (areaValue <= 25) preferredLabel = "4.5L";
-    else if (areaValue >= 100) preferredLabel = "22L";
-    else preferredLabel = "4.5L"; // 26–99 m²
+    // Filter out SKUs that meet the minimum liters needed
+    const viableSkus = skuEstimates.filter(s => s.totalLiters >= litersNeeded);
 
-    const preferred = skuEstimates.find((s) => s.label === preferredLabel);
-    const minUnits = Math.min(...skuEstimates.map((s) => s.units));
-    const minUnitSku = skuEstimates
-      .filter((s) => s.units === minUnits)
-      .sort((a, b) => b.liters - a.liters)[0]; // tie → prefer larger
+    // Sort viable SKUs based on priority:
+    // 1. Prefer SKUs with fewer units
+    // 2. Then, prefer SKUs with less leftover
+    // 3. Then, prefer smaller container sizes
+    const sortedViableSkus = [...viableSkus].sort((a, b) => {
+      // Primary: fewer units
+      if (a.units !== b.units) {
+        return a.units - b.units;
+      }
+      
+      // Secondary: less leftover
+      if (a.leftover !== b.leftover) {
+        return a.leftover - b.leftover;
+      }
 
-    // If preferred requires >1 extra container vs minimum, switch
-    let recommended;
-    if (preferred.units > minUnitSku.units + 1) {
-      recommended = minUnitSku;
-    } else {
-      recommended = preferred;
-    }
+      // Tertiary: smaller container size
+      return a.liters - b.liters;
+    });
+
+    const recommended = sortedViableSkus[0] || skuEstimates[0];
 
     return {
       litersNeeded: litersNeeded.toFixed(1),
