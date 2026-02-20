@@ -1,0 +1,51 @@
+import { useState } from "react";
+import ByAreaTab from "@/components/ByAreaTab";
+import ByVolumeTab from "@/components/ByVolumeTab";
+
+const TABS = [
+  { key: "area", label: "By Area" },
+  { key: "volume", label: "By Volume" },
+];
+
+export default function Home() {
+  const [activeTab, setActiveTab] = useState("area");
+
+  return (
+    <div className="min-h-screen bg-[#f7f7f5]">
+      {/* Header */}
+      <div className="px-5 pt-8 pb-2 max-w-lg mx-auto">
+        <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-neutral-400 mb-1">
+          Blocmate
+        </p>
+        <h1 className="text-2xl font-semibold text-neutral-900 tracking-tight">
+          CORE100 Coverage
+        </h1>
+        <p className="text-sm text-neutral-400 mt-1">Calculator</p>
+      </div>
+
+      {/* Tabs */}
+      <div className="px-5 pt-4 pb-2 max-w-lg mx-auto">
+        <div className="flex bg-white rounded-xl p-1 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+          {TABS.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                activeTab === tab.key
+                  ? "bg-neutral-900 text-white shadow-sm"
+                  : "text-neutral-400 hover:text-neutral-600"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Tab Content */}
+      <div className="px-5 py-4 pb-12 max-w-lg mx-auto">
+        {activeTab === "area" ? <ByAreaTab /> : <ByVolumeTab />}
+      </div>
+    </div>
+  );
+}
