@@ -155,6 +155,49 @@ export default function ByAreaTab() {
         </div>
       </div>
 
+      {/* ── Recommendation Preference ── */}
+      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+        <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
+          Recommendation Preference
+        </label>
+        <RadioGroup
+          value={preference}
+          onValueChange={setPreference}
+          className="grid grid-cols-2 gap-3"
+        >
+          <div className={`flex items-center space-x-2 p-3 rounded-xl border transition-all ${
+            preference === "minimizeUnits" 
+              ? "bg-neutral-900 border-neutral-900" 
+              : "bg-neutral-50 border-neutral-200 hover:bg-neutral-100"
+          }`}>
+            <RadioGroupItem value="minimizeUnits" id="minimizeUnits" className={preference === "minimizeUnits" ? "border-white" : ""} />
+            <Label 
+              htmlFor="minimizeUnits" 
+              className={`text-sm font-medium cursor-pointer ${
+                preference === "minimizeUnits" ? "text-white" : "text-neutral-700"
+              }`}
+            >
+              Fewer Units
+            </Label>
+          </div>
+          <div className={`flex items-center space-x-2 p-3 rounded-xl border transition-all ${
+            preference === "minimizeLeftover" 
+              ? "bg-neutral-900 border-neutral-900" 
+              : "bg-neutral-50 border-neutral-200 hover:bg-neutral-100"
+          }`}>
+            <RadioGroupItem value="minimizeLeftover" id="minimizeLeftover" className={preference === "minimizeLeftover" ? "border-white" : ""} />
+            <Label 
+              htmlFor="minimizeLeftover" 
+              className={`text-sm font-medium cursor-pointer ${
+                preference === "minimizeLeftover" ? "text-white" : "text-neutral-700"
+              }`}
+            >
+              Less Leftover
+            </Label>
+          </div>
+        </RadioGroup>
+      </div>
+
       {/* ── Volume Needed ── */}
       <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] text-center">
         <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
