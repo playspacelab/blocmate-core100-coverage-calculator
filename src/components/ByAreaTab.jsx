@@ -73,7 +73,7 @@ export default function ByAreaTab() {
       skuEstimates,
       recommended,
     };
-  }, [area, coats, buffer]);
+  }, [area, coats, buffer, preference]);
 
   const adjustArea = (delta) => {
     setArea((prev) => Math.max(1, prev + delta));
