@@ -135,6 +135,21 @@ export default function ByAreaTab() {
         </div>
       </div>
 
+      {/* ── Volume Needed ── */}
+      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+        <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+          You'll Need Approximately
+        </p>
+        <div className="flex items-baseline gap-2">
+          <span className="text-3xl font-light text-neutral-900">
+            {calc.litersNeeded} L
+          </span>
+          <span className="text-lg text-neutral-400">
+            ({calc.gallonsNeeded} gal)
+          </span>
+        </div>
+      </div>
+
       {/* ── Recommended SKU (Hero Card) ── */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)]">
         <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/20 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -171,21 +186,6 @@ export default function ByAreaTab() {
           <p className="mt-4 text-xs text-amber-700/70 leading-relaxed">
             Recommendation is based on project size and optimal container quantity.
           </p>
-        </div>
-      </div>
-
-      {/* ── Volume Needed ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
-          You'll Need Approximately
-        </p>
-        <div className="flex items-baseline gap-2">
-          <span className="text-3xl font-light text-neutral-900">
-            {calc.litersNeeded} L
-          </span>
-          <span className="text-lg text-neutral-400">
-            ({calc.gallonsNeeded} gal)
-          </span>
         </div>
       </div>
 
