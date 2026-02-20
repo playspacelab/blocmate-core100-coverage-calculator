@@ -84,7 +84,7 @@ export default function ByAreaTab() {
               min={1}
               value={area}
               onChange={(e) => setArea(Math.max(1, parseInt(e.target.value) || 1))}
-              className="text-5xl font-light text-center w-36 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="text-6xl font-light text-center w-44 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
             <span className="text-lg text-neutral-400 font-medium">m²</span>
           </div>
@@ -141,7 +141,7 @@ export default function ByAreaTab() {
           You'll Need Approximately
         </p>
         <div className="flex items-baseline gap-2">
-          <span className="text-3xl font-light text-neutral-900">
+          <span className="text-3xl font-bold text-neutral-900">
             {calc.litersNeeded} L
           </span>
           <span className="text-lg text-neutral-400">
@@ -161,11 +161,11 @@ export default function ByAreaTab() {
             </span>
           </div>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-5xl font-light text-neutral-900">
+            <span className="text-5xl font-bold text-neutral-900">
               {calc.recommended.units}
             </span>
-            <span className="text-2xl text-neutral-500 font-light">×</span>
-            <span className="text-3xl font-medium text-neutral-900">
+            <span className="text-2xl text-neutral-500 font-bold">×</span>
+            <span className="text-3xl font-bold text-neutral-900">
               {calc.recommended.label}
             </span>
           </div>
