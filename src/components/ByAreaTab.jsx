@@ -84,7 +84,7 @@ export default function ByAreaTab() {
               min={1}
               value={area}
               onChange={(e) => setArea(Math.max(1, parseInt(e.target.value) || 1))}
-              className="text-5xl font-light text-center w-24 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="text-5xl font-light text-center w-36 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
             <span className="text-lg text-neutral-400 font-medium">m²</span>
           </div>
