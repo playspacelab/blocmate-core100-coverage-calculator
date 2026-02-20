@@ -17,6 +17,7 @@ export default function ByAreaTab() {
   const [area, setArea] = useState(10);
   const [coats, setCoats] = useState(1);
   const [buffer, setBuffer] = useState(0);
+  const [preference, setPreference] = useState("minimizeUnits");
 
   // ── Core calculations ──
   const calc = useMemo(() => {
