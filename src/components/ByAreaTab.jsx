@@ -38,23 +38,31 @@ export default function ByAreaTab() {
     // Filter out SKUs that meet the minimum liters needed
     const viableSkus = skuEstimates.filter(s => s.totalLiters >= litersNeeded);
 
-    // Sort viable SKUs based on priority:
-    // 1. Prefer SKUs with fewer units
-    // 2. Then, prefer SKUs with less leftover
-    // 3. Then, prefer smaller container sizes
+    // Sort viable SKUs based on user preference
     const sortedViableSkus = [...viableSkus].sort((a, b) => {
-      // Primary: fewer units
-      if (a.units !== b.units) {
-        return a.units - b.units;
+      if (preference === "minimizeUnits") {
+        // Priority 1: Fewer units
+        if (a.units !== b.units) {
+          return a.units - b.units;
+        }
+        // Priority 2: Less leftover
+        if (a.leftover !== b.leftover) {
+          return a.leftover - b.leftover;
+        }
+        // Priority 3: Smaller container size
+        return a.liters - b.liters;
+      } else { // minimizeLeftover
+        // Priority 1: Less leftover
+        if (a.leftover !== b.leftover) {
+          return a.leftover - b.leftover;
+        }
+        // Priority 2: Fewer units
+        if (a.units !== b.units) {
+          return a.units - b.units;
+        }
+        // Priority 3: Smaller container size
+        return a.liters - b.liters;
       }
-      
-      // Secondary: less leftover
-      if (a.leftover !== b.leftover) {
-        return a.leftover - b.leftover;
-      }
-
-      // Tertiary: smaller container size
-      return a.liters - b.liters;
     });
 
     const recommended = sortedViableSkus[0] || skuEstimates[0];
