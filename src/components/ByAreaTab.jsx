@@ -1,8 +1,6 @@
 import { useState, useMemo } from "react";
 import { Plus, Minus, Flame } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 
 // ── Constants ──
 const COVERAGE_RATE = 6; // m² per liter per coat
@@ -17,7 +15,6 @@ export default function ByAreaTab() {
   const [area, setArea] = useState(10);
   const [coats, setCoats] = useState(1);
   const [buffer, setBuffer] = useState(0);
-  const [preference, setPreference] = useState("minimizeUnits");
 
   // ── Core calculations ──
   const calc = useMemo(() => {
@@ -46,31 +43,18 @@ export default function ByAreaTab() {
       return true;
     });
 
-    // Sort viable SKUs based on user preference
+    // Sort viable SKUs to minimize leftover
     const sortedViableSkus = [...viableSkus].sort((a, b) => {
-      if (preference === "minimizeUnits") {
-        // Priority 1: Fewer units
-        if (a.units !== b.units) {
-          return a.units - b.units;
-        }
-        // Priority 2: Less leftover
-        if (a.leftover !== b.leftover) {
-          return a.leftover - b.leftover;
-        }
-        // Priority 3: Smaller container size
-        return a.liters - b.liters;
-      } else { // minimizeLeftover
-        // Priority 1: Less leftover
-        if (a.leftover !== b.leftover) {
-          return a.leftover - b.leftover;
-        }
-        // Priority 2: Fewer units
-        if (a.units !== b.units) {
-          return a.units - b.units;
-        }
-        // Priority 3: Larger container size
-        return b.liters - a.liters;
+      // Priority 1: Less leftover
+      if (a.leftover !== b.leftover) {
+        return a.leftover - b.leftover;
       }
+      // Priority 2: Fewer units
+      if (a.units !== b.units) {
+        return a.units - b.units;
+      }
+      // Priority 3: Larger container size
+      return b.liters - a.liters;
     });
 
     const recommended = sortedViableSkus[0] || skuEstimates[0];
@@ -81,7 +65,7 @@ export default function ByAreaTab() {
       skuEstimates,
       recommended,
     };
-  }, [area, coats, buffer, preference]);
+  }, [area, coats, buffer]);
 
   const adjustArea = (delta) => {
     setArea((prev) => Math.max(1, prev + delta));
@@ -161,49 +145,6 @@ export default function ByAreaTab() {
             className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-neutral-900 [&_[role=slider]]:border-0"
           />
         </div>
-      </div>
-
-      {/* ── Recommendation Preference ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
-          Recommendation Preference
-        </label>
-        <RadioGroup
-          value={preference}
-          onValueChange={setPreference}
-          className="grid grid-cols-2 gap-3"
-        >
-          <div className={`flex items-center space-x-2 p-3 rounded-xl border transition-all ${
-            preference === "minimizeUnits" 
-              ? "bg-neutral-900 border-neutral-900" 
-              : "bg-neutral-50 border-neutral-200 hover:bg-neutral-100"
-          }`}>
-            <RadioGroupItem value="minimizeUnits" id="minimizeUnits" className={preference === "minimizeUnits" ? "border-white" : ""} />
-            <Label 
-              htmlFor="minimizeUnits" 
-              className={`text-sm font-medium cursor-pointer ${
-                preference === "minimizeUnits" ? "text-white" : "text-neutral-700"
-              }`}
-            >
-              Fewer Units
-            </Label>
-          </div>
-          <div className={`flex items-center space-x-2 p-3 rounded-xl border transition-all ${
-            preference === "minimizeLeftover" 
-              ? "bg-neutral-900 border-neutral-900" 
-              : "bg-neutral-50 border-neutral-200 hover:bg-neutral-100"
-          }`}>
-            <RadioGroupItem value="minimizeLeftover" id="minimizeLeftover" className={preference === "minimizeLeftover" ? "border-white" : ""} />
-            <Label 
-              htmlFor="minimizeLeftover" 
-              className={`text-sm font-medium cursor-pointer ${
-                preference === "minimizeLeftover" ? "text-white" : "text-neutral-700"
-              }`}
-            >
-              Less Leftover
-            </Label>
-          </div>
-        </RadioGroup>
       </div>
 
       {/* ── Volume Needed ── */}
