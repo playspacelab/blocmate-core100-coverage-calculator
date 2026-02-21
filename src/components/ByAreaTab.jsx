@@ -36,7 +36,15 @@ export default function ByAreaTab() {
 
     // ── Recommendation logic ──
     // Filter out SKUs that meet the minimum liters needed
-    const viableSkus = skuEstimates.filter(s => s.totalLiters >= litersNeeded);
+    // Also exclude SKUs with too many units (impractical)
+    const viableSkus = skuEstimates.filter(s => {
+      if (s.totalLiters < litersNeeded) return false;
+      // Don't recommend 1L if 7+ units needed (7L+)
+      if (s.liters === 1 && s.units >= 7) return false;
+      // Don't recommend 4.5L if 9+ units needed (40.5L+)
+      if (s.liters === 4.5 && s.units >= 9) return false;
+      return true;
+    });
 
     // Sort viable SKUs based on user preference
     const sortedViableSkus = [...viableSkus].sort((a, b) => {
