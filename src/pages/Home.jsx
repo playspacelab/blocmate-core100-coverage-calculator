@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header */}
       <div className="px-5 pt-8 pb-2 max-w-lg mx-auto">
         <img 
-          src="http://craftbar.ph/CORE100-01.svg" 
+          src="http://craftbar.ph/CORE100-01.png" 
           alt="Logo" 
           className="w-full mb-6"
         />
