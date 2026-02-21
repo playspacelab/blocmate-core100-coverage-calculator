@@ -17,12 +17,9 @@ export default function Home() {
         <img 
           src="http://craftbar.ph/CORE100-01.svg" 
           alt="Logo" 
-          className="h-12 mb-4"
+          className="w-full mb-6"
         />
-        <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-neutral-400 mb-1">
-          Blocmate
-        </p>
-        <h1 className="text-2xl font-semibold text-neutral-900 tracking-tight">
+        <h1 className="text-3xl font-semibold text-neutral-900 tracking-tight text-center">
           Coverage Calculator
         </h1>
       </div>
