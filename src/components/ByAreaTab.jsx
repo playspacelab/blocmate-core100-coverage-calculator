@@ -208,9 +208,6 @@ export default function ByAreaTab() {
               </span>
             </p>
           </div>
-          <p className="mt-4 text-xs text-red-700/80 leading-relaxed text-center font-medium">
-            Recommendation minimizes leftover paint, then prioritizes fewer units and larger containers.
-          </p>
         </div>
       </div>
 
