@@ -122,9 +122,10 @@ export default function ByAreaTab() {
                 onClick={() => setCoats(c)}
                 className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
                   coats === c
-                    ? "bg-neutral-900 text-white shadow-md"
+                    ? "bg-neutral-900 shadow-md"
                     : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
                 }`}
+                style={coats === c ? { color: '#ffda00' } : {}}
               >
                 {c}
               </button>
@@ -174,7 +175,7 @@ export default function ByAreaTab() {
           </div>
           
           <div className="grid grid-cols-2 gap-3 mb-5">
-            <div className="bg-neutral-900 rounded-xl p-4 text-center shadow-md">
+            <div className="rounded-xl p-4 text-center shadow-md" style={{ backgroundColor: '#DC3949' }}>
               <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
                 SKU
               </p>
@@ -183,7 +184,7 @@ export default function ByAreaTab() {
               </div>
             </div>
 
-            <div className="bg-neutral-900 rounded-xl p-4 text-center shadow-md">
+            <div className="rounded-xl p-4 text-center shadow-md" style={{ backgroundColor: '#DC3949' }}>
               <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
                 Quantity
               </p>
