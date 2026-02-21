@@ -74,16 +74,16 @@ export default function ByAreaTab() {
   return (
     <div className="space-y-5">
       {/* ── Area Input ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">
           Area
         </label>
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => adjustArea(-1)}
-            className="h-12 w-12 rounded-xl bg-neutral-100 flex items-center justify-center active:scale-95 transition-transform"
+            className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
           >
-            <Minus className="h-5 w-5 text-neutral-600" />
+            <Minus className="h-5 w-5 text-gray-700" />
           </button>
           <div className="flex items-baseline gap-1">
             <input
@@ -96,23 +96,23 @@ export default function ByAreaTab() {
                   setArea(1);
                 }
               }}
-              className="text-6xl font-light text-center w-44 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="text-6xl font-light text-center w-44 bg-transparent outline-none text-gray-900 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
-            <span className="text-lg text-neutral-400 font-medium">m²</span>
+            <span className="text-lg text-gray-500 font-medium">m²</span>
           </div>
           <button
             onClick={() => adjustArea(1)}
-            className="h-12 w-12 rounded-xl bg-neutral-100 flex items-center justify-center active:scale-95 transition-transform"
+            className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
           >
-            <Plus className="h-5 w-5 text-neutral-600" />
+            <Plus className="h-5 w-5 text-gray-700" />
           </button>
         </div>
       </div>
 
       {/* ── Coats & Buffer ── */}
       <div className="grid grid-cols-2 gap-3">
-        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-          <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block">
             Coats
           </label>
           <div className="flex gap-2">
@@ -122,8 +122,8 @@ export default function ByAreaTab() {
                 onClick={() => setCoats(c)}
                 className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
                   coats === c
-                    ? "bg-neutral-900 shadow-md"
-                    : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
+                    ? "bg-neutral-900 shadow-lg"
+                    : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
                 }`}
                 style={coats === c ? { color: '#ffda00' } : {}}
               >
@@ -132,51 +132,51 @@ export default function ByAreaTab() {
             ))}
           </div>
         </div>
-        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-          <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2 block">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block">
             Buffer
           </label>
-          <div className="text-2xl font-light text-center mb-2">{buffer}%</div>
+          <div className="text-2xl font-light text-center mb-2 text-gray-900">{buffer}%</div>
           <Slider
             value={[buffer]}
             onValueChange={([v]) => setBuffer(v)}
             max={20}
             min={0}
             step={1}
-            className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-neutral-900 [&_[role=slider]]:border-0"
+            className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-neutral-900 [&_[role=slider]]:border-0 [&_[role=slider]]:shadow-md"
           />
         </div>
       </div>
 
       {/* ── Volume Needed ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] text-center">
-        <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-blue-100 text-center">
+        <p className="text-xs font-semibold tracking-widest uppercase text-blue-600 mb-3">
           You'll Need Approximately
         </p>
         <div className="flex items-baseline gap-2 justify-center">
-          <span className="text-3xl font-bold text-neutral-900">
+          <span className="text-4xl font-bold text-gray-900">
             {calc.litersNeeded} L
           </span>
-          <span className="text-lg text-neutral-400">
+          <span className="text-lg text-gray-500">
             ({calc.gallonsNeeded} gal)
           </span>
         </div>
       </div>
 
       {/* ── Recommended SKU (Hero Card) ── */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 p-6 shadow-[0_2px_12px_rgba(217,119,6,0.08)]">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/20 rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 border border-red-100 p-6 shadow-xl">
+        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-200/20 to-orange-200/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
         <div className="relative">
           <div className="flex items-center gap-2 mb-5 justify-center">
-            <Flame className="h-4 w-4 text-amber-600" />
-            <span className="text-xs font-bold tracking-widest uppercase text-amber-700">
+            <Flame className="h-5 w-5 text-red-600" />
+            <span className="text-xs font-bold tracking-widest uppercase text-red-700">
               Recommended
             </span>
           </div>
           
           <div className="grid grid-cols-2 gap-3 mb-5">
-            <div className="rounded-xl p-4 text-center shadow-md" style={{ backgroundColor: '#DC3949' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3">
                 SKU
               </p>
               <div className="text-3xl font-bold text-white">
@@ -184,8 +184,8 @@ export default function ByAreaTab() {
               </div>
             </div>
 
-            <div className="rounded-xl p-4 text-center shadow-md" style={{ backgroundColor: '#DC3949' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3">
                 Quantity
               </p>
               <div className="text-3xl font-bold text-white">
@@ -194,29 +194,29 @@ export default function ByAreaTab() {
             </div>
           </div>
 
-          <div className="space-y-1 text-center">
-            <p className="text-sm text-neutral-600">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 space-y-2 text-center">
+            <p className="text-sm text-gray-700">
               Total Provided:{" "}
-              <span className="font-semibold text-neutral-800">
+              <span className="font-bold text-gray-900">
                 {calc.recommended.totalLiters.toFixed(1)} L
               </span>
             </p>
-            <p className="text-sm text-neutral-600">
+            <p className="text-sm text-gray-700">
               Estimated Leftover:{" "}
-              <span className="font-semibold text-neutral-800">
+              <span className="font-bold text-gray-900">
                 {calc.recommended.leftover.toFixed(1)} L
               </span>
             </p>
           </div>
-          <p className="mt-4 text-xs text-amber-700/70 leading-relaxed text-center">
+          <p className="mt-4 text-xs text-red-700/80 leading-relaxed text-center font-medium">
             Recommendation is based on project size and optimal container quantity.
           </p>
         </div>
       </div>
 
       {/* ── All SKU Options ── */}
-      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-4">
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">
           All Container Options
         </p>
         <div className="space-y-3">
@@ -225,32 +225,34 @@ export default function ByAreaTab() {
             return (
               <div
                 key={sku.label}
-                className={`flex items-center justify-between p-3 rounded-xl transition-colors ${
-                  isRec ? "bg-amber-50 border border-amber-200/50" : "bg-neutral-50"
+                className={`flex items-center justify-between p-4 rounded-xl transition-all ${
+                  isRec 
+                    ? "bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 shadow-md" 
+                    : "bg-white border border-gray-200 hover:border-gray-300"
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className={`h-10 w-10 rounded-lg flex items-center justify-center text-sm font-bold ${
+                    className={`h-11 w-11 rounded-lg flex items-center justify-center text-sm font-bold shadow-sm ${
                       isRec
-                        ? "bg-amber-100 text-amber-700"
-                        : "bg-neutral-200/70 text-neutral-600"
+                        ? "bg-red-100 text-red-700 border border-red-200"
+                        : "bg-gray-100 text-gray-700 border border-gray-200"
                     }`}
                   >
                     {sku.label}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-neutral-800">
+                    <p className="text-sm font-semibold text-gray-900">
                       {sku.units} {sku.units === 1 ? "unit" : "units"}
                     </p>
-                    <p className="text-xs text-neutral-500">
+                    <p className="text-xs text-gray-500">
                       Total {sku.totalLiters.toFixed(1)} L
                     </p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-xs text-neutral-400">Leftover</p>
-                  <p className="text-sm font-medium text-neutral-600">
+                  <p className="text-xs text-gray-500 font-medium">Leftover</p>
+                  <p className="text-sm font-semibold text-gray-700">
                     {sku.leftover.toFixed(1)} L
                   </p>
                 </div>
