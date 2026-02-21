@@ -52,15 +52,15 @@ export default function ByAreaTab() {
         // Priority 3: Smaller container size
         return a.liters - b.liters;
       } else { // minimizeLeftover
-        // Score-based approach: balance leftover with unit count and container size
-        // Lower score = better recommendation
-        const scoreA = a.leftover + (a.units * 0.5) - (a.liters * 0.1);
-        const scoreB = b.leftover + (b.units * 0.5) - (b.liters * 0.1);
-        
-        if (scoreA !== scoreB) {
-          return scoreA - scoreB;
+        // Priority 1: Less leftover
+        if (a.leftover !== b.leftover) {
+          return a.leftover - b.leftover;
         }
-        // Tiebreaker: prefer larger containers
+        // Priority 2: Fewer units
+        if (a.units !== b.units) {
+          return a.units - b.units;
+        }
+        // Priority 3: Larger container size
         return b.liters - a.liters;
       }
     });
