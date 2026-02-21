@@ -149,8 +149,8 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Volume Needed ── */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-blue-100 text-center">
-        <p className="text-xs font-semibold tracking-widest uppercase text-blue-600 mb-3">
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3">
           You'll Need Approximately
         </p>
         <div className="flex items-baseline gap-2 justify-center">
