@@ -257,10 +257,12 @@ export default function ByAreaTab() {
             );
           })}
         </div>
-        <p className="mt-4 text-xs text-gray-500 leading-relaxed">
-          Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
-        </p>
       </div>
+
+      {/* ── Coverage Note ── */}
+      <p className="text-xs text-gray-500 leading-relaxed px-2">
+        Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
+      </p>
     </div>
   );
 }
