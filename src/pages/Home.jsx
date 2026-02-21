@@ -18,9 +18,8 @@ export default function Home() {
           Blocmate
         </p>
         <h1 className="text-2xl font-semibold text-neutral-900 tracking-tight">
-          CORE100 Coverage
+          Coverage Calculator
         </h1>
-        <p className="text-sm text-neutral-400 mt-1">Calculator</p>
       </div>
 
       {/* Tabs */}
