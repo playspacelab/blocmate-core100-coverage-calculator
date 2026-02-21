@@ -209,7 +209,7 @@ export default function ByAreaTab() {
             </p>
           </div>
           <p className="mt-4 text-xs text-red-700/80 leading-relaxed text-center font-medium">
-            Recommendation is based on project size and optimal container quantity.
+            Recommendation minimizes leftover paint, then prioritizes fewer units and larger containers.
           </p>
         </div>
       </div>
