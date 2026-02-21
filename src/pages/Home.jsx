@@ -14,6 +14,11 @@ export default function Home() {
     <div className="min-h-screen bg-[#f7f7f5]">
       {/* Header */}
       <div className="px-5 pt-8 pb-2 max-w-lg mx-auto">
+        <img 
+          src="http://craftbar.ph/CORE100-01.svg" 
+          alt="Logo" 
+          className="h-12 mb-4"
+        />
         <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-neutral-400 mb-1">
           Blocmate
         </p>
