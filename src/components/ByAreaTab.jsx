@@ -196,13 +196,13 @@ export default function ByAreaTab() {
 
           <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 space-y-2 text-center">
             <p className="text-sm text-gray-700">
-              Total Provided:{" "}
+              Total Product Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.totalLiters.toFixed(1)} L
               </span>
             </p>
             <p className="text-sm text-gray-700">
-              Estimated Leftover:{" "}
+              Estimated Excess Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.leftover.toFixed(1)} L
               </span>
