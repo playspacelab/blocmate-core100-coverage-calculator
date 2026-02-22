@@ -111,8 +111,8 @@ export default function ByVolumeTab() {
           <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
             Total Volume
           </p>
-          <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-light text-neutral-900">
+          <div className="flex items-baseline gap-2 justify-center">
+            <span className="text-4xl font-bold text-neutral-900">
               {calc.totalLiters} L
             </span>
             <span className="text-lg text-neutral-400">
@@ -125,8 +125,8 @@ export default function ByVolumeTab() {
           <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
             Approx Coverage
           </p>
-          <div className="flex items-baseline gap-1">
-            <span className="text-5xl font-light text-neutral-900">
+          <div className="flex items-baseline gap-1 justify-center">
+            <span className="text-5xl font-bold text-neutral-900">
               {calc.coverageFinal}
             </span>
             <span className="text-xl text-neutral-400 font-medium">m²</span>
