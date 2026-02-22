@@ -29,7 +29,7 @@ export default function Home() {
             fontWeight: 'bold',
             fontStyle: 'oblique',
             letterSpacing: '0.01em',
-            fontSize: '37pt'
+            fontSize: '42pt'
           }}
         >
           Coverage Calculator
