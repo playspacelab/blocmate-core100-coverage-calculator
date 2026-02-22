@@ -133,7 +133,7 @@ export default function ByAreaTab() {
           </div>
         </div>
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block text-center">
             Buffer
           </label>
           <div className="text-2xl font-light text-center mb-2 text-gray-900">{buffer}%</div>
