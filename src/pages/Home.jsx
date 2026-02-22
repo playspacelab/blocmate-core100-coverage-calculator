@@ -23,7 +23,9 @@ export default function Home() {
         <img 
           src="http://craftbar.ph/CORE100-01.png" 
           alt="Logo" 
-          className="w-full mb-6"
+          className="w-full mb-6 select-none"
+          draggable={false}
+          style={{ userSelect: 'none', WebkitUserDrag: 'none' }}
         />
         <h1 
           className="text-neutral-900 text-center"
