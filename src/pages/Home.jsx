@@ -72,8 +72,8 @@ export default function Home() {
       <div className="px-5 pb-8 max-w-lg mx-auto">
         <Button
           onClick={() => window.close()}
-          variant="outline"
-          className="w-full flex items-center justify-center gap-2 h-12 rounded-xl border-gray-300 text-gray-700 hover:bg-gray-50"
+          className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800"
+          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
         >
           <X className="h-5 w-5" />
           Close Window
