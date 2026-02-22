@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
       {/* Tabs */}
-      <div className="px-5 pt-[25px] pb-2 max-w-lg mx-auto">
+      <div className="px-5 pt-[10px] pb-2 max-w-lg mx-auto">
         <div className="flex bg-white rounded-xl p-1 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
           {TABS.map((tab) => (
             <button
