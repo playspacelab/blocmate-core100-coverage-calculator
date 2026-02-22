@@ -6,9 +6,9 @@ import { Slider } from "@/components/ui/slider";
 const COVERAGE_RATE = 6; // m² per liter per coat
 const GALLONS_PER_LITER = 3.78541;
 const SKUS = [
-  { label: "22L", liters: 22 },
-  { label: "4.5L", liters: 4.5 },
   { label: "1L", liters: 1 },
+  { label: "4.5L", liters: 4.5 },
+  { label: "22L", liters: 22 },
 ];
 
 export default function ByAreaTab() {
