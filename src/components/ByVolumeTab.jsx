@@ -108,7 +108,7 @@ export default function ByVolumeTab() {
       {/* ── Results ── */}
       <div className="bg-white rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
         <div className="mb-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2 text-center">
             Total Volume
           </p>
           <div className="flex items-baseline gap-2 justify-center">
@@ -122,7 +122,7 @@ export default function ByVolumeTab() {
         </div>
 
         <div className="border-t border-neutral-100 pt-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2 text-center">
             Approx Coverage
           </p>
           <div className="flex items-baseline gap-1 justify-center">
