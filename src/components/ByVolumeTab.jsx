@@ -15,15 +15,13 @@ export default function ByVolumeTab() {
   const [selectedSku, setSelectedSku] = useState(0); // index into SKUS
   const [units, setUnits] = useState(1);
   const [coats, setCoats] = useState(1);
-  const [buffer, setBuffer] = useState(0);
 
   const calc = useMemo(() => {
     const sku = SKUS[selectedSku];
     const totalLiters = sku.liters * units;
     const gallonsTotal = totalLiters / GALLONS_PER_LITER;
     const coverageRaw = totalLiters * COVERAGE_RATE;
-    const coverageAfterCoats = coverageRaw / coats;
-    const coverageFinal = coverageAfterCoats * (1 - buffer / 100);
+    const coverageFinal = coverageRaw / coats;
 
     return {
       totalLiters,
@@ -31,7 +29,7 @@ export default function ByVolumeTab() {
       coverageFinal: coverageFinal.toFixed(1),
       skuLabel: sku.label,
     };
-  }, [selectedSku, units, coats, buffer]);
+  }, [selectedSku, units, coats]);
 
   return (
     <div className="space-y-5">
@@ -85,41 +83,25 @@ export default function ByVolumeTab() {
         </div>
       </div>
 
-      {/* ── Coats & Buffer ── */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-          <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
-            Coats
-          </label>
-          <div className="flex gap-2">
-            {[1, 2, 3].map((c) => (
-              <button
-                key={c}
-                onClick={() => setCoats(c)}
-                className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
-                  coats === c
-                    ? "bg-neutral-900 text-white shadow-md"
-                    : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-          <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2 block">
-            Buffer
-          </label>
-          <div className="text-2xl font-light text-center mb-2">{buffer}%</div>
-          <Slider
-            value={[buffer]}
-            onValueChange={([v]) => setBuffer(v)}
-            max={20}
-            min={0}
-            step={1}
-            className="[&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-neutral-900 [&_[role=slider]]:border-0"
-          />
+      {/* ── Coats ── */}
+      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+        <label className="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3 block">
+          Coats
+        </label>
+        <div className="flex gap-2">
+          {[1, 2, 3].map((c) => (
+            <button
+              key={c}
+              onClick={() => setCoats(c)}
+              className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
+                coats === c
+                  ? "bg-neutral-900 text-white shadow-md"
+                  : "bg-neutral-100 text-neutral-500 hover:bg-neutral-200"
+              }`}
+            >
+              {c}
+            </button>
+          ))}
         </div>
       </div>
 
