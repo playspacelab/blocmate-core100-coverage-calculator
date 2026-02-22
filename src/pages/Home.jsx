@@ -32,7 +32,8 @@ export default function Home() {
             letterSpacing: '-0.5pt',
             fontSize: '28pt',
             whiteSpace: 'nowrap',
-            marginBottom: '5pt'
+            marginTop: '5pt',
+            marginBottom: '10pt'
           }}
         >
           Coverage Calculator
