@@ -23,12 +23,13 @@ export default function Home() {
           className="w-full mb-6"
         />
         <h1 
-          className="text-4xl text-neutral-900 text-center"
+          className="text-neutral-900 text-center"
           style={{ 
             fontFamily: "'Futura Condensed PT', 'Futura', 'Arial Narrow', sans-serif",
             fontWeight: 'bold',
             fontStyle: 'oblique',
-            letterSpacing: '0.01em'
+            letterSpacing: '0.01em',
+            fontSize: '37pt'
           }}
         >
           Coverage Calculator
