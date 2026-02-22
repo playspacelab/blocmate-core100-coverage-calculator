@@ -25,14 +25,15 @@ export default function Home() {
           className="w-full mb-6"
         />
         <h1 
-          className="text-neutral-900 text-center mx-auto"
+          className="text-neutral-900 text-center mx-auto block"
           style={{ 
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: '700',
             letterSpacing: '-0.5pt',
             fontSize: '28pt',
             maxWidth: '70%',
-            whiteSpace: 'nowrap'
+            whiteSpace: 'nowrap',
+            margin: '0 auto'
           }}
         >
           Coverage Calculator
