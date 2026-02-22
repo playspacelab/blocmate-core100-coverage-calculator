@@ -137,7 +137,7 @@ export default function ByVolumeTab() {
               </div>
             </div>
 
-            <div className="rounded-xl p-4 text-center shadow-lg flex flex-col justify-center" style={{ backgroundColor: '#DC3949' }}>
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
               <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
                 Approx Coverage
               </p>
