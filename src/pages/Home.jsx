@@ -28,7 +28,7 @@ export default function Home() {
             fontFamily: "'Futura Condensed PT', 'Futura', 'Arial Narrow', sans-serif",
             fontWeight: 'bold',
             fontStyle: 'oblique',
-            letterSpacing: '0.01em',
+            letterSpacing: '-1pt',
             fontSize: '42pt'
           }}
         >
