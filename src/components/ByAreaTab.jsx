@@ -111,7 +111,7 @@ export default function ByAreaTab() {
 
       {/* ── Coats & Buffer ── */}
       <div className="grid grid-cols-2 gap-3">
-        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
           <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
             Coats
           </label>
@@ -132,7 +132,7 @@ export default function ByAreaTab() {
             ))}
           </div>
         </div>
-        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
           <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
             Buffer
           </label>
