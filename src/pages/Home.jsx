@@ -31,7 +31,8 @@ export default function Home() {
             fontWeight: '700',
             letterSpacing: '-0.5pt',
             fontSize: '28pt',
-            whiteSpace: 'nowrap'
+            whiteSpace: 'nowrap',
+            marginBottom: '5pt'
           }}
         >
           Coverage Calculator
