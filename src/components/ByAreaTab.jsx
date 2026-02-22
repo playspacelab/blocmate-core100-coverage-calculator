@@ -154,7 +154,7 @@ export default function ByAreaTab() {
           You'll Need Approximately
         </p>
         <div className="flex items-baseline gap-2 justify-center">
-          <span className="text-4xl font-bold text-gray-900">
+          <span className="text-5xl font-bold text-gray-900">
             {calc.litersNeeded} L
           </span>
           <span className="text-lg text-gray-500">
