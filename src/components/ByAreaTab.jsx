@@ -122,10 +122,10 @@ export default function ByAreaTab() {
                 onClick={() => setCoats(c)}
                 className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
                   coats === c
-                    ? "bg-neutral-900 shadow-lg"
-                    : "bg-white border border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300"
+                    ? "bg-neutral-900 text-white shadow-md"
+                    : "bg-neutral-100 text-gray-500 hover:bg-neutral-200"
                 }`}
-                style={coats === c ? { color: 'white', fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' } : { fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
+                style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
               >
                 {c}
               </button>
