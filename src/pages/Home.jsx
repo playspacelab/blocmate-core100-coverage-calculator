@@ -50,7 +50,7 @@ export default function Home() {
                   ? "bg-neutral-900 text-white shadow-sm"
                   : "text-neutral-400 hover:text-neutral-600"
               }`}
-              style={{ fontSize: '17pt' }}
+              style={{ fontSize: '17pt', fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
             >
               {tab.key === "area" && <Ruler className="h-5 w-5" />}
               {tab.key === "volume" && <Droplet className="h-5 w-5" />}
