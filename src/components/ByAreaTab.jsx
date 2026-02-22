@@ -75,7 +75,7 @@ export default function ByAreaTab() {
     <div className="space-y-5">
       {/* ── Area Input ── */}
       <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
-        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block text-center">
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
           Area
         </label>
         <div className="flex items-center justify-center gap-4">
@@ -112,7 +112,7 @@ export default function ByAreaTab() {
       {/* ── Coats & Buffer ── */}
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
             Coats
           </label>
           <div className="flex gap-2">
@@ -125,7 +125,7 @@ export default function ByAreaTab() {
                     ? "bg-neutral-900 shadow-lg"
                     : "bg-white border border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300"
                 }`}
-                style={coats === c ? { color: '#ffda00' } : {}}
+                style={coats === c ? { color: '#ffda00', fontFamily: "'Antenna Medium', sans-serif" } : { fontFamily: "'Antenna Medium', sans-serif" }}
               >
                 {c}
               </button>
@@ -133,7 +133,7 @@ export default function ByAreaTab() {
           </div>
         </div>
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block text-center">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
             Buffer
           </label>
           <div className="text-2xl font-light text-center mb-2 text-gray-900">{buffer}%</div>
@@ -150,7 +150,7 @@ export default function ByAreaTab() {
 
       {/* ── Volume Needed ── */}
       <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
-        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3">
+        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
           You'll Need Approximately
         </p>
         <div className="flex items-baseline gap-2 justify-center">
@@ -169,14 +169,14 @@ export default function ByAreaTab() {
         <div className="relative">
           <div className="flex items-center gap-2 mb-5 justify-center">
             <Flame className="h-5 w-5 text-red-600" />
-            <span className="text-xs font-bold tracking-widest uppercase text-red-700">
+            <span className="text-xs font-bold tracking-widest uppercase text-red-700" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
               Recommended
             </span>
           </div>
           
           <div className="grid grid-cols-2 gap-3 mb-5">
             <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3">
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
                 SKU
               </p>
               <div className="text-3xl font-bold text-white">
@@ -185,7 +185,7 @@ export default function ByAreaTab() {
             </div>
 
             <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3">
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
                 Quantity
               </p>
               <div className="text-3xl font-bold text-white">
@@ -213,7 +213,7 @@ export default function ByAreaTab() {
 
       {/* ── All SKU Options ── */}
       <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 text-center">
+        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
           All Container Options
         </p>
         <div className="space-y-3">
@@ -260,7 +260,7 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Coverage Note ── */}
-      <p className="text-sm text-gray-500 leading-relaxed px-2">
+      <p className="text-sm text-gray-500 leading-relaxed px-2" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
         Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
       </p>
     </div>
