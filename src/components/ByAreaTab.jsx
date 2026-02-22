@@ -81,7 +81,7 @@ export default function ByAreaTab() {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => adjustArea(-1)}
-            className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
+            className="h-12 w-12 rounded-xl bg-neutral-100 flex items-center justify-center active:scale-95 transition-transform"
           >
             <Minus className="h-5 w-5 text-gray-500" />
           </button>
@@ -102,7 +102,7 @@ export default function ByAreaTab() {
           </div>
           <button
             onClick={() => adjustArea(1)}
-            className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
+            className="h-12 w-12 rounded-xl bg-neutral-100 flex items-center justify-center active:scale-95 transition-transform"
           >
             <Plus className="h-5 w-5 text-gray-500" />
           </button>
