@@ -125,23 +125,23 @@ export default function ByVolumeTab() {
           </div>
           
           <div className="grid grid-cols-2 gap-3 mb-5">
-            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#e6e7e8' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-gray-600 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#dc3947' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
                 Total Volume
               </p>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
+              <div className="text-3xl font-bold text-white mb-1">
                 {calc.totalLiters} L
               </div>
-              <div className="text-sm text-gray-700">
+              <div className="text-sm text-red-100">
                 ({calc.gallonsTotal} gal)
               </div>
             </div>
 
-            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#e6e7e8' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-gray-600 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#dc3947' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
                 Approx Coverage
               </p>
-              <div className="text-4xl font-bold text-gray-900">
+              <div className="text-4xl font-bold text-white">
                 {calc.coverageFinal} m²
               </div>
             </div>
