@@ -16,7 +16,7 @@ export default function Home() {
         @import url('https://fonts.cdnfonts.com/css/futura-condensed-pt');
       `}</style>
       {/* Header */}
-      <div className="px-5 pt-8 pb-2 max-w-lg mx-auto">
+      <div className="px-5 pt-8 pb-0 max-w-lg mx-auto">
         <img 
           src="http://craftbar.ph/CORE100-01.png" 
           alt="Logo" 
