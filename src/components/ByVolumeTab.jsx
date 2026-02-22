@@ -119,7 +119,7 @@ export default function ByVolumeTab() {
           <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
             Total Volume
           </p>
-          <div className="flex items-baseline gap-2 justify-center">
+          <div className="flex flex-col items-center justify-center">
             <span className="text-4xl font-bold text-neutral-900">
               {calc.totalLiters} L
             </span>

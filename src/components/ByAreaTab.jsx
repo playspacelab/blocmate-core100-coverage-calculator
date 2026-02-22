@@ -153,7 +153,7 @@ export default function ByAreaTab() {
         <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           You'll Need Approximately
         </p>
-        <div className="flex items-baseline gap-2 justify-center">
+        <div className="flex flex-col items-center justify-center">
           <span className="text-5xl font-bold text-gray-900">
             {calc.litersNeeded} L
           </span>
