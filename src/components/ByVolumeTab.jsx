@@ -36,7 +36,7 @@ export default function ByVolumeTab() {
     <div className="space-y-5">
       {/* ── SKU Selector ── */}
       <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           Container Size
         </label>
         <div className="flex gap-2">
@@ -49,7 +49,7 @@ export default function ByVolumeTab() {
                   ? "bg-neutral-900 text-white shadow-md"
                   : "bg-neutral-100 text-gray-500 hover:bg-neutral-200"
               }`}
-              style={{ fontFamily: "'Antenna Medium', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
             >
               {sku.label}
             </button>
@@ -59,7 +59,7 @@ export default function ByVolumeTab() {
 
       {/* ── Units Input ── */}
       <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           Number of Containers
         </label>
         <div className="flex items-center justify-center gap-4">
@@ -92,7 +92,7 @@ export default function ByVolumeTab() {
 
       {/* ── Coats ── */}
       <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           Coats
         </label>
         <div className="flex gap-2">
@@ -105,7 +105,7 @@ export default function ByVolumeTab() {
                   ? "bg-neutral-900 text-white shadow-md"
                   : "bg-neutral-100 text-gray-500 hover:bg-neutral-200"
               }`}
-              style={{ fontFamily: "'Antenna Medium', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
             >
               {c}
             </button>
@@ -116,7 +116,7 @@ export default function ByVolumeTab() {
       {/* ── Results ── */}
       <div className="bg-white rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
         <div className="mb-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
             Total Volume
           </p>
           <div className="flex items-baseline gap-2 justify-center">
@@ -130,7 +130,7 @@ export default function ByVolumeTab() {
         </div>
 
         <div className="border-t border-neutral-100 pt-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
             Approx Coverage
           </p>
           <div className="flex items-baseline gap-1 justify-center">
@@ -141,14 +141,14 @@ export default function ByVolumeTab() {
           </div>
         </div>
 
-        <p className="mt-5 text-xs text-gray-500 leading-relaxed text-center" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+        <p className="mt-5 text-xs text-gray-500 leading-relaxed text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           Based on {coats} coat{coats > 1 ? "s" : ""} at {COVERAGE_RATE} m² per
           liter per coat.
         </p>
       </div>
 
       {/* ── Coverage Note ── */}
-      <p className="text-sm text-gray-500 leading-relaxed px-2" style={{ fontFamily: "'Antenna Medium', sans-serif" }}>
+      <p className="text-sm text-gray-500 leading-relaxed px-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
         Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
       </p>
     </div>

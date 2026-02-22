@@ -15,7 +15,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#f7f7f5]">
       <style>{`
         @import url('https://fonts.cdnfonts.com/css/futura-condensed-pt');
-        @import url('https://fonts.cdnfonts.com/css/antenna');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
       `}</style>
       {/* Header */}
       <div className="px-5 pt-8 pb-0 max-w-lg mx-auto">
