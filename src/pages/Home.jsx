@@ -73,7 +73,7 @@ export default function Home() {
         <Button
           onClick={() => window.close()}
           className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800"
-          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}
+          style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold', fontSize: '16px' }}
         >
           <X className="h-5 w-5" />
           Close Window
