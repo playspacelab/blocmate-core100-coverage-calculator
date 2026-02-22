@@ -28,7 +28,7 @@ export default function Home() {
           className="text-neutral-900 text-center"
           style={{ 
             fontFamily: "'Futura Condensed PT', 'Futura', 'Arial Narrow', sans-serif",
-            fontWeight: 'bold',
+            fontWeight: '700',
             fontStyle: 'oblique',
             letterSpacing: '-0.5pt',
             fontSize: '42pt'
