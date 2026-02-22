@@ -76,7 +76,7 @@ export default function Home() {
           className="w-full flex items-center justify-center gap-2 h-12 rounded-xl border-gray-300 text-gray-700 hover:bg-gray-50"
         >
           <X className="h-5 w-5" />
-          Close
+          Close Window
         </Button>
       </div>
     </div>
