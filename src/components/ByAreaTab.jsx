@@ -75,7 +75,7 @@ export default function ByAreaTab() {
     <div className="space-y-5">
       {/* ── Area Input ── */}
       <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
-        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">
+        <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block text-center">
           Area
         </label>
         <div className="flex items-center justify-center gap-4">
@@ -112,7 +112,7 @@ export default function ByAreaTab() {
       {/* ── Coats & Buffer ── */}
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block">
+          <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3 block text-center">
             Coats
           </label>
           <div className="flex gap-2">
@@ -213,7 +213,7 @@ export default function ByAreaTab() {
 
       {/* ── All SKU Options ── */}
       <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
-        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">
+        <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 text-center">
           All Container Options
         </p>
         <div className="space-y-3">
