@@ -74,7 +74,7 @@ export default function ByAreaTab() {
   return (
     <div className="space-y-5">
       {/* ── Area Input ── */}
-      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+      <div className="bg-white rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
         <label className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           Area
         </label>
@@ -149,7 +149,7 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Volume Needed ── */}
-      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+      <div className="bg-white rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] text-center">
         <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           You'll Need Approximately
         </p>
@@ -212,7 +212,7 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── All SKU Options ── */}
-      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5 shadow-lg border border-gray-100">
+      <div className="bg-white rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
         <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
           All Container Options
         </p>
