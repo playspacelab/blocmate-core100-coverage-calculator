@@ -43,11 +43,12 @@ export default function Home() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              className={`flex-1 py-2.5 rounded-lg font-semibold transition-all duration-200 ${
                 activeTab === tab.key
                   ? "bg-neutral-900 text-white shadow-sm"
                   : "text-neutral-400 hover:text-neutral-600"
               }`}
+              style={{ fontSize: '17pt' }}
             >
               {tab.label}
             </button>
