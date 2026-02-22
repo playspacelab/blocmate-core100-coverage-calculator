@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Flame } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 
 // ── Constants ──
@@ -114,37 +114,45 @@ export default function ByVolumeTab() {
       </div>
 
       {/* ── Results ── */}
-      <div className="bg-white rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-        <div className="mb-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
-            Total Volume
-          </p>
-          <div className="flex flex-col items-center justify-center">
-            <span className="text-4xl font-bold text-neutral-900">
-              {calc.totalLiters} L
-            </span>
-            <span className="text-lg text-gray-500">
-              ({calc.gallonsTotal} gal)
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 border border-red-100 p-6 shadow-xl">
+        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-200/20 to-orange-200/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+        <div className="relative">
+          <div className="flex items-center gap-2 mb-5 justify-center">
+            <Flame className="h-5 w-5 text-red-600" />
+            <span className="text-xs font-bold tracking-widest uppercase text-red-700" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
+              Results
             </span>
           </div>
-        </div>
+          
+          <div className="grid grid-cols-2 gap-3 mb-5">
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
+                Total Volume
+              </p>
+              <div className="text-3xl font-bold text-white mb-1">
+                {calc.totalLiters} L
+              </div>
+              <div className="text-sm text-red-100">
+                ({calc.gallonsTotal} gal)
+              </div>
+            </div>
 
-        <div className="border-t border-neutral-100 pt-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
-            Approx Coverage
-          </p>
-          <div className="flex items-baseline gap-1 justify-center">
-            <span className="text-5xl font-bold text-neutral-900">
-              {calc.coverageFinal}
-            </span>
-            <span className="text-xl text-gray-500 font-medium">m²</span>
+            <div className="rounded-xl p-4 text-center shadow-lg" style={{ backgroundColor: '#DC3949' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
+                Approx Coverage
+              </p>
+              <div className="text-3xl font-bold text-white">
+                {calc.coverageFinal} m²
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center">
+            <p className="text-sm text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
+              Based on {coats} coat{coats > 1 ? "s" : ""} at {COVERAGE_RATE} m² per liter per coat.
+            </p>
           </div>
         </div>
-
-        <p className="mt-5 text-gray-900 leading-relaxed text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300', fontSize: '10pt' }}>
-          Based on {coats} coat{coats > 1 ? "s" : ""} at {COVERAGE_RATE} m² per
-          liter per coat.
-        </p>
       </div>
 
       {/* ── Coverage Note ── */}
