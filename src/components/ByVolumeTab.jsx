@@ -141,7 +141,7 @@ export default function ByVolumeTab() {
               <p className="text-xs font-semibold tracking-widest uppercase text-red-100 mb-3" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold' }}>
                 Approx Coverage
               </p>
-              <div className="text-5xl font-bold text-white">
+              <div className="text-4xl font-bold text-white">
                 {calc.coverageFinal} m²
               </div>
             </div>
