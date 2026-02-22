@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Ruler, Droplet } from "lucide-react";
+import { Ruler, Droplet, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import ByAreaTab from "@/components/ByAreaTab";
 import ByVolumeTab from "@/components/ByVolumeTab";
 
@@ -63,8 +64,20 @@ export default function Home() {
       </div>
 
       {/* Tab Content */}
-      <div className="px-5 py-4 pb-12 max-w-lg mx-auto">
+      <div className="px-5 py-4 max-w-lg mx-auto">
         {activeTab === "area" ? <ByAreaTab /> : <ByVolumeTab />}
+      </div>
+
+      {/* Close Button */}
+      <div className="px-5 pb-8 max-w-lg mx-auto">
+        <Button
+          onClick={() => window.close()}
+          variant="outline"
+          className="w-full flex items-center justify-center gap-2 h-12 rounded-xl border-gray-300 text-gray-700 hover:bg-gray-50"
+        >
+          <X className="h-5 w-5" />
+          Close
+        </Button>
       </div>
     </div>
   );
