@@ -27,9 +27,8 @@ export default function Home() {
         <h1 
           className="text-neutral-900 text-center"
           style={{ 
-            fontFamily: "'Futura Condensed PT', 'Futura', 'Arial Narrow', sans-serif",
-            fontWeight: '700',
-            fontStyle: 'oblique',
+            fontFamily: "'Montserrat', sans-serif",
+            fontWeight: '400',
             letterSpacing: '-0.5pt',
             fontSize: '42pt'
           }}
