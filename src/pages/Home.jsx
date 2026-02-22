@@ -12,6 +12,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f7f7f5]">
+      <style>{`
+        @import url('https://fonts.cdnfonts.com/css/futura-condensed-pt');
+      `}</style>
       {/* Header */}
       <div className="px-5 pt-8 pb-2 max-w-lg mx-auto">
         <img 
@@ -19,7 +22,14 @@ export default function Home() {
           alt="Logo" 
           className="w-full mb-6"
         />
-        <h1 className="text-3xl font-semibold text-neutral-900 tracking-tight text-center">
+        <h1 
+          className="text-3xl text-neutral-900 tracking-tight text-center uppercase"
+          style={{ 
+            fontFamily: "'Futura Condensed PT', 'Futura', 'Arial Narrow', sans-serif",
+            fontWeight: 'bold',
+            fontStyle: 'oblique'
+          }}
+        >
           Coverage Calculator
         </h1>
       </div>
