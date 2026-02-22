@@ -18,7 +18,8 @@ export default function ByVolumeTab() {
 
   const calc = useMemo(() => {
     const sku = SKUS[selectedSku];
-    const totalLiters = sku.liters * units;
+    const unitsValue = parseInt(units) || 1;
+    const totalLiters = sku.liters * unitsValue;
     const gallonsTotal = totalLiters / GALLONS_PER_LITER;
     const coverageRaw = totalLiters * COVERAGE_RATE;
     const coverageFinal = coverageRaw / coats;
@@ -71,8 +72,13 @@ export default function ByVolumeTab() {
             type="number"
             min={1}
             value={units}
-            onChange={(e) => setUnits(Math.max(1, parseInt(e.target.value) || 1))}
-            className="text-5xl font-light text-center w-20 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            onChange={(e) => setUnits(e.target.value)}
+            onBlur={(e) => {
+              if (e.target.value === '' || parseInt(e.target.value) < 1) {
+                setUnits(1);
+              }
+            }}
+            className="text-6xl font-light text-center w-44 bg-transparent outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <button
             onClick={() => setUnits((prev) => prev + 1)}
