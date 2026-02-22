@@ -83,7 +83,7 @@ export default function ByAreaTab() {
             onClick={() => adjustArea(-1)}
             className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
           >
-            <Minus className="h-5 w-5 text-gray-700" />
+            <Minus className="h-5 w-5 text-gray-500" />
           </button>
           <div className="flex items-baseline gap-1">
             <input
@@ -104,7 +104,7 @@ export default function ByAreaTab() {
             onClick={() => adjustArea(1)}
             className="h-12 w-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center hover:border-gray-300 hover:shadow-md active:scale-95 transition-all"
           >
-            <Plus className="h-5 w-5 text-gray-700" />
+            <Plus className="h-5 w-5 text-gray-500" />
           </button>
         </div>
       </div>
@@ -123,7 +123,7 @@ export default function ByAreaTab() {
                 className={`flex-1 h-11 rounded-xl text-sm font-semibold transition-all ${
                   coats === c
                     ? "bg-neutral-900 shadow-lg"
-                    : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
+                    : "bg-white border border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-300"
                 }`}
                 style={coats === c ? { color: '#ffda00' } : {}}
               >
@@ -195,13 +195,13 @@ export default function ByAreaTab() {
           </div>
 
           <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 space-y-2 text-center">
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-gray-500">
               Total Product Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.totalLiters.toFixed(1)} L
               </span>
             </p>
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-gray-500">
               Estimated Excess Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.leftover.toFixed(1)} L
@@ -233,13 +233,13 @@ export default function ByAreaTab() {
                     className={`h-11 w-11 rounded-lg flex items-center justify-center text-sm font-bold shadow-sm ${
                       isRec
                         ? "bg-red-100 text-red-700 border border-red-200"
-                        : "bg-gray-100 text-gray-700 border border-gray-200"
+                        : "bg-gray-100 text-gray-500 border border-gray-200"
                     }`}
                   >
                     {sku.label}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">
+                    <p className="text-sm font-semibold text-gray-500">
                       {sku.units} {sku.units === 1 ? "unit" : "units"}
                     </p>
                     <p className="text-xs text-gray-500">
@@ -249,7 +249,7 @@ export default function ByAreaTab() {
                 </div>
                 <div className="text-right">
                   <p className="text-xs text-gray-500 font-medium">Leftover</p>
-                  <p className="text-sm font-semibold text-gray-700">
+                  <p className="text-sm font-semibold text-gray-500">
                     {sku.leftover.toFixed(1)} L
                   </p>
                 </div>
