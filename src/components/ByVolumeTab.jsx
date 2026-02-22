@@ -141,14 +141,14 @@ export default function ByVolumeTab() {
           </div>
         </div>
 
-        <p className="mt-5 text-gray-500 leading-relaxed text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300', fontSize: '10pt' }}>
+        <p className="mt-5 text-gray-900 leading-relaxed text-center" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300', fontSize: '10pt' }}>
           Based on {coats} coat{coats > 1 ? "s" : ""} at {COVERAGE_RATE} m² per
           liter per coat.
         </p>
       </div>
 
       {/* ── Coverage Note ── */}
-      <p className="text-sm text-gray-500 leading-relaxed px-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
+      <p className="text-sm text-gray-900 leading-relaxed px-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
         Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
       </p>
     </div>

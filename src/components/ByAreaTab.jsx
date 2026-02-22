@@ -195,13 +195,13 @@ export default function ByAreaTab() {
           </div>
 
           <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 space-y-2 text-center">
-            <p className="text-sm text-gray-500" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
+            <p className="text-sm text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
               Total Product Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.totalLiters.toFixed(1)} L
               </span>
             </p>
-            <p className="text-sm text-gray-500" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
+            <p className="text-sm text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
               Estimated Excess Volume:{" "}
               <span className="font-bold text-gray-900">
                 {calc.recommended.leftover.toFixed(1)} L
@@ -260,7 +260,7 @@ export default function ByAreaTab() {
       </div>
 
       {/* ── Coverage Note ── */}
-      <p className="text-sm text-gray-500 leading-relaxed px-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
+      <p className="text-sm text-gray-900 leading-relaxed px-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: '300' }}>
         Coverage rates per coat are approximate and based on smooth, horizontal surfaces. Actual coverage will vary depending on the condition and absorbency of the concrete. These figures are intended for estimation purposes only. For optimal performance, up to three (3) coats may be applied.
       </p>
     </div>
